@@ -25,12 +25,12 @@ async function getInitialUsersData(): Promise<InitialUsersData | undefined> {
   return undefined;
 }
 
-export default async function Home() {
+export default async function UsersPage() {
   const initialUsersData = await getInitialUsersData();
 
   return (
     <AdminDashboardClient
-      defaultView="dashboard"
+      defaultView="users"
       initialUsersData={initialUsersData}
     />
   );

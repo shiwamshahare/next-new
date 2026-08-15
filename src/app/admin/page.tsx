@@ -25,7 +25,7 @@ async function getInitialUsersData(): Promise<InitialUsersData | undefined> {
   return undefined;
 }
 
-export default async function Home() {
+export default async function AdminDashboardPage() {
   const initialUsersData = await getInitialUsersData();
 
   return (
