@@ -1,5 +1,7 @@
 import AdminDashboardClient, { InitialUsersData } from "@/components/admin/admin-dashboard-client";
 
+export const dynamic = "force-dynamic";
+
 async function getInitialUsersData(): Promise<InitialUsersData | undefined> {
   try {
     const res = await fetch("https://api.freeapi.app/api/v1/public/randomusers?page=1&limit=10", {

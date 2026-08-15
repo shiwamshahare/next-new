@@ -15,6 +15,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     asChild = false,
     isLoading = false,
     className,
+    disabled,
     ...props
   }, ref) => {
     const baseClasses = 'inline-flex items-center justify-center rounded-md text-sm font-medium font-variant-numeric: tabular-nums transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none min-h-[2.5rem] min-w-[2.5rem]';
@@ -40,12 +41,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       ? 'cursor-not-allowed animate-pulse opacity-70'
       : '';
 
-    const Component = asChild ? React.Fragment : 'button';
-
     return (
-      <Component
+      <button
         ref={ref}
-        disabled={isLoading}
+        disabled={isLoading || disabled}
         className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${loadingClasses} ${className || ''}`}
         {...props}
       />

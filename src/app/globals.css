@@ -267,7 +267,7 @@ textarea::placeholder {
 }
 
 .brutal-button-red {
-  @apply border border-yellow bg-white px-4 py-2 font-mono text-sm font-bold cursor-pointer;
+  @apply border border-accent bg-white px-4 py-2 font-mono text-sm font-bold cursor-pointer;
   border-style: solid;
   border-width: 2px;
   border-color: #ffff00;

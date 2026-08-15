@@ -1,6 +1,8 @@
 import AdminDashboardClient from "@/components/admin/admin-dashboard-client";
 import { getProfileServerAction } from "@/app/actions/profile";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProfilePage() {
   // Server-Side Fetch profile data on server before rendering HTML
   const profileRes = await getProfileServerAction();
